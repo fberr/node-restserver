@@ -5,6 +5,14 @@ const { validarCampos } = require('../middlewares/validar-campos');
 
 const router = Router();
 
+router.post('/login',[
+   // check('id_token', 'el id token es necesario').not().isEmpty(),
+   validarCampos
+
+
+], login);
+
+
 router.post('/google',[
     check('id_token', 'el id token es necesario').not().isEmpty(),
    validarCampos
